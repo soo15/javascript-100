@@ -18,23 +18,3 @@
     // console.log(divisors(12));
     // console.log(divisors(13));
     
-
-
-    //*최소값 구하기
-
-
-    function findShort(s){
-        let wordArr = s.split(' ');
-        let min = wordArr[0].length;
-        console.log(min);
-        
-        for(let word of wordArr){
-            if(word.length < min){
-                min = word.length
-            }
-        }
-        return min
-    }
-
-
-    console.log(findShort('bitcoin take over the world maybe who knows perhaps'))

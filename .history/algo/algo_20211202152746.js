@@ -28,11 +28,11 @@
         let min = wordArr[0].length;
         console.log(min);
         
-        for(let word of wordArr){
-            if(word.length < min){
-                min = word.length
-            }
-        }
+        // for(let word of wordArr){
+        //     if(word.length < min){
+        //         min = word.length
+        //     }
+        // }
         return min
     }
 
