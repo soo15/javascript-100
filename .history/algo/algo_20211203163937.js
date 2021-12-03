@@ -334,46 +334,15 @@
 // }
 
 
-// let moveZeros = function(arr){
-//     return arr.filter((x) => x != 0).concat(arr.filter((x) => x === 0))
-// }
-
-// console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]))
-
-
-
-//재료
-// 1) 레시피 재료와 내가 가진 재료를 하나하나 비교한다.
-// 2) 꼭 필요한 재료인데 내가 가진 재료에 없다면 케이크를 만들 수 없으므로 0을 리턴한다.
-// 3) 내가 가진 재료에서 레시피에서 필요한 재료만큼 뺀다.
-// 4) 내가 가진 재료가 0보다 작아질때까지 계속 반복해서 뺀다.
-// 5) 몇 번 반복했는지 센 다음 그 수를 리턴한다.
-
-// 객체(object)
-// - 강아지
-// 프로퍼티(property)
-// - dog.name = "장군"
-// - dog.family = "시고르자브종"
-// - dog.age = 5
-// - dog.weight = 400
-// 메소드(method)
-// - dog.bowwow()
-// - dog.eat()
-// - dog.sleep()
-// - dog.play()
-
-function cakes(recipe, available){
-    let reKey = Object.keys(recipe)
-    let avKey = Object.keys(available)
-
-    let hasIngre = function(){
-        for(let v of reKey){
-            return avKey.includes(v)
-        }
-    }
+let moveZeros = function(arr){
+    return arr.filter((x) => x != 0).concat(arr.filter((x) => x === 0))
 }
 
-console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}))
+console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]))
+
+
+
+
 
 
 

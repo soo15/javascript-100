@@ -365,13 +365,8 @@
 function cakes(recipe, available){
     let reKey = Object.keys(recipe)
     let avKey = Object.keys(available)
-
-    let hasIngre = function(){
-        for(let v of reKey){
-            return avKey.includes(v)
-        }
-    }
 }
+
 
 console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}))
 

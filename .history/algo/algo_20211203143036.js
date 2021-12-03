@@ -270,112 +270,22 @@
 // console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));
 
 
-// function findOdd(A){
-//     let serchNum = A.reduce(function(av, cv, i ,arr){
-//         let count = 0;
-//         let index = A.indexOf(cv)
-//         console.log(cv, i, count)
-//         while(index > -1){
-//             count++
-//             index = A.indexOf(cv, index+1)
-//         }
-//         if(count % 2 != 0){
-//             return cv
-//         } 
-//         return av
-//     }, A[0])
-//     return serchNum
-// }
-
-// function findOddInt(A){
-//     let isChecked = [];
-    
-//     for(let i=0; i<A.length; i++){
-//         if(isChecked[A[i]]){
-//             continue;
-//         }else{
-//             let count = 0;
-//             let index = A.indexOf(A[i])
-//             while(index > -1){
-//                 count++
-//                 index = A.indexOf(A[i], index + 1);
-//             }
-
-//             if(count % 2 === 1){
-//                 return A[i];
-//             }else{
-//                 isChecked.push(A[i])
-//             }
-//         }
-//     }
-// }
-
-// console.log(findOddInt([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));
-
-
-//배열의 특정요소 맨뒤로 옮기기
-
-// let moveZeros = function (arr) {
-//     return arr.sort((l, r) => {
-//     if(l === 0) return 1
-//     else return -1
-//     })
-// }
-
-
-// let moveZeros = function(arr){
-//     let lastI =  arr.lastIndexOf(0);
-//     while(lastI > -1){
-//         arr.splice(lastI, 1)
-//         arr.push(0)
-//         lastI = arr.lastIndexOf(0, lastI-1)
-//     }
-//     return arr
-// }
-
-
-// let moveZeros = function(arr){
-//     return arr.filter((x) => x != 0).concat(arr.filter((x) => x === 0))
-// }
-
-// console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]))
-
-
-
-//재료
-// 1) 레시피 재료와 내가 가진 재료를 하나하나 비교한다.
-// 2) 꼭 필요한 재료인데 내가 가진 재료에 없다면 케이크를 만들 수 없으므로 0을 리턴한다.
-// 3) 내가 가진 재료에서 레시피에서 필요한 재료만큼 뺀다.
-// 4) 내가 가진 재료가 0보다 작아질때까지 계속 반복해서 뺀다.
-// 5) 몇 번 반복했는지 센 다음 그 수를 리턴한다.
-
-// 객체(object)
-// - 강아지
-// 프로퍼티(property)
-// - dog.name = "장군"
-// - dog.family = "시고르자브종"
-// - dog.age = 5
-// - dog.weight = 400
-// 메소드(method)
-// - dog.bowwow()
-// - dog.eat()
-// - dog.sleep()
-// - dog.play()
-
-function cakes(recipe, available){
-    let reKey = Object.keys(recipe)
-    let avKey = Object.keys(available)
-
-    let hasIngre = function(){
-        for(let v of reKey){
-            return avKey.includes(v)
+function findOdd(A){
+    let serchNum = A.reduce(function(av, cv, i ,arr){
+        let count = 0;
+        let index = A.indexOf(cv)
+        console.log(cv, i, count)
+        while(index > -1){
+            count++
+            index = A.indexOf(cv, index+1)
         }
-    }
+        if(count % 2 != 0){
+            return cv
+        } 
+        return av
+    }, A[0])
+    return serchNum
 }
-
-console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}))
-
-
-
+// console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));
 
 
