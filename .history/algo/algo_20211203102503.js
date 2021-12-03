@@ -167,18 +167,20 @@
 
 
 
-// function toWeirdCase(string){
-//     let full = string.split(' ').map((x, i) => {
-//          let word = x.split('').map((y, j) => {
-//                      if(j % 2 == 0) return y.toUpperCase()
-//                      else return y.toLowerCase()
-//          })
-//          return word.join('')
-//     })
-//      return full.join(' ')
-// }
+function toWeirdCase(string){
+    let full = string.split(' ').map((x, i) => {
 
-//  console.log(toWeirdCase("Weird string case"))
+        console.log(full);
+        let word = x.split('').map((y, j) => {
+            if(j % 2 == 0) return y.toUpperCase()
+                        else return y.toLowerCase()
+        })
+        return word.join('')
+    })
+    return full.join(' ')
+}
+
+ console.log(toWeirdCase("Weird string case"))
 
 
 

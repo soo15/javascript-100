@@ -114,71 +114,21 @@
 
 
 //삼각형인가?
-// function isTriagle(a,b,c){
-//     let arr = [a, b, c]
-//     let max = arr[0]
-//     let sum = 0;
-//     for(let i in arr){
-//         console.log(i);
-//         if(arr[i] > max){
-//             max = arr[i]
-//         }else{
-//             sum += arr[i]
-//         }
-//     }
+function isTriagle(a,b,c){
+    let arr = [a, b, c]
+    let max = arr[0]
+    let sum = 0;
+    for(let i in arr){
+        console.log(i);
+        if(arr[i] > max){
+            max = arr[i]
+        }else{
+            sum += arr[i]
+        }
+    }
 
-//     if(max < sum) return true
-//                 else return false
-// }
+    if(max < sum) return true
+                else return false
+}
 
-
-// function isTriangle(a,b,c){
-//     let max = Math.max(a, b, c)
-//     let sum = (a + b + c) - max;
-//     if(max < sum)
-//         return true
-//     else
-//        return false
-// }
-
-
-// console.log(isTriangle( 10 ,15 ,26 ));
-
-
-//홀수 짝수 판별하기
-
-// function toWeirdCase(string){
-//     let arr = string.split(' ')
-//     // console.log(arr)
-//     let fullName = ''
-//     arr.forEach(function(v, i){
-//         let spl = arr[i].split('');
-//         let newSpl = spl.map(function(al, j){
-//             if(j % 2 == 0){
-//                 return al.toUpperCase()
-//             }else{
-//                 return al.toLowerCase()
-//             }
-//         })
-//         fullName += ' ' + newSpl.join('')
-//     })
-//     return fullName.trim()
-// }
-
-
-
-// function toWeirdCase(string){
-//     let full = string.split(' ').map((x, i) => {
-//          let word = x.split('').map((y, j) => {
-//                      if(j % 2 == 0) return y.toUpperCase()
-//                      else return y.toLowerCase()
-//          })
-//          return word.join('')
-//     })
-//      return full.join(' ')
-// }
-
-//  console.log(toWeirdCase("Weird string case"))
-
-
-
+console.log(findNextSquare(10,15,18));
