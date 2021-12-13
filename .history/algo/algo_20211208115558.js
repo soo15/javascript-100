@@ -362,29 +362,34 @@
 // - dog.sleep()
 // - dog.play()
 
+function cakes(recipe, available){
+    let reKey = Object.keys(recipe)
+    let avKey = Object.keys(available)
 
+    let hasIngre = function(){
+        for(let v of reKey){
+            return console.oavKey.includes(v)
+        }
+    }
+    if(! hasIngre()) return 0
 
+    let conut   = 0
+    while(makeCake() !== false){
+        makeCake()
+    }
 
+    return conut
 
+    function makeCake() {
+        for(let i =0; i<reKey.length; i++){
+            available[reKey[i]] = abailable[reKey[i]] - recipe[reKey[i]]
+            if(avaliable[reKey[i]] <  0) return false
+        }
+        count++
+    }
+}
 
-// function cakes(recipe, available) {
-//         let reKey = Object.keys(recipe)
-//         let avKey = Object.keys(available)
-//         let hasIngre = function () {
-//         for(let v of reKey) {
-//             return avKey.includes(v)
-//             }
-//         }
-//         if(! hasIngre()) return 0
-//         let countArr = []
-//         for(let i=0; i<reKey.length; i++) {
-//             countArr.push(Math.floor(available[reKey[i]] / recipe[reKey[i]]))
-//         }
-//         return Math.min(...countArr)
-//     }
-    
-
-// console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}))
+console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}))
 
 
 
