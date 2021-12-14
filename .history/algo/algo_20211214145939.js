@@ -460,7 +460,7 @@ function doneOrNot(board){
 
     function verifyNum(arr){
         for(let i=1; i<10; i++){
-            if(! arr.includes(i)) return false
+            if(! arr.include(i)) return false
         }
         return true
     }

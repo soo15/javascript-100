@@ -408,75 +408,19 @@
 
 //스토쿠 
 
-// function doneOrNot(board){
-//     for(let i=0; i < board.length; i++){
-//         if(! verifyNum(board[i])) return 'try again!'
-//     }
-
-//     function verifyNum(arr){
-//         for(let i=0; i<10; i++){
-//             for(let i=0; i<10; i++){
-//                 if(! arr.include(i)) return false
-//             }
-//             return true
-//         }
-//     }
-// }
-
-
-//3x3
-function doneOrNot(board){
-    for(let i=0; i<board.length; i++){
-        if(! verifyNum(board[i])) return 'Try again!'
-
-        let boardCol = board.map((x, j, arr) => arr[j][i])
-
-        if(! verifyNum(boardCol)) return 'Try again'
-    }
-
-    let boardBox = []
-    let box = []
-    let index = 0;
-    while(i < 9){
-        for(let j=index; j<index+3; j++){
-            box.push(board[j][i])
-        }
-
-        i++
-        
-        if(box.length > 8){
-            if(! verifyNum(box)) return 'Try again!'
-            boardBox.push(box)
-            box = []
-            if(boardBox.length%3 == 0){
-                i=0;
-                index+=3
-                if(boardBox.length>8) return 'Finished!'
-            }
-        }
-    }
 
 
 
-    function verifyNum(arr){
-        for(let i=1; i<10; i++){
-            if(! arr.includes(i)) return false
-        }
-        return true
-    }
-    
-}
 
-
-// console.log(doneOrNot([[5, 3, 4, 6, 7, 8, 9, 1, 2], 
-// [6, 7, 2, 1, 9, 5, 3, 4, 8],
-// [1, 9, 8, 3, 4, 2, 5, 6, 7],
-// [8, 5, 9, 7, 6, 1, 4, 2, 3],
-// [4, 2, 6, 8, 5, 3, 7, 9, 1],
-// [7, 1, 3, 9, 2, 4, 8, 5, 6],
-// [9, 6, 1, 5, 3, 7, 2, 8, 4],
-// [2, 8, 7, 4, 1, 9, 6, 3, 5],
-// [3, 4, 5, 2, 8, 6, 1, 7, 9]]))
+console.log(doneOrNot([[5, 3, 4, 6, 7, 8, 9, 1, 2], 
+[6, 7, 2, 1, 9, 5, 3, 4, 8],
+[1, 9, 8, 3, 4, 2, 5, 6, 7],
+[8, 5, 9, 7, 6, 1, 4, 2, 3],
+[4, 2, 6, 8, 5, 3, 7, 9, 1],
+[7, 1, 3, 9, 2, 4, 8, 5, 6],
+[9, 6, 1, 5, 3, 7, 2, 8, 4],
+[2, 8, 7, 4, 1, 9, 6, 3, 5],
+[3, 4, 5, 2, 8, 6, 1, 7, 9]]))
 
 
 
