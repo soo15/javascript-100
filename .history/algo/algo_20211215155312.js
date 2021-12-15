@@ -491,6 +491,8 @@
 //배열값으로 수량체크하기
 
 
+const L = ["ABART 20", "CDXEF 50", "BKWRK 25", "BTSQZ 89", "DRTYM 60"]
+const M = ["A", "B", "C", "W"] 
 
 
 
@@ -518,7 +520,3 @@ function stockList(listOfArt, listOfCat){
 
     return listOfCat.join(' - ')
 }
-
-
-
-console.log(stockList(["ABART 20", "CDXEF 50", "BKWRK 25", "BTSQZ 89", "DRTYM 60"], ["A", "B", "C", "W"]));

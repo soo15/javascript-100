@@ -491,34 +491,5 @@
 //배열값으로 수량체크하기
 
 
-
-
-
-function stockList(listOfArt, listOfCat){
-    if(listOfArt.length === 0 || listOfCat.length === 0)
-        return ''
-
-    let list = listOfArt.reduce((av,cv, i, arr) => {
-        listOfCat.forEach((alp) => {
-            let num = Number(cv.substring(cv.indexOf(' ')+1))
-            if(cv.indexOf(alp) == 0 && ! (alp in av)) {
-                av[alp] = num
-            } else if(cv.indexOf(alp) == 0 && alp in av) {
-                av[alp] += num
-            } else if (cv.indexOf(alp) < 0 && ! (alp in av)) {
-                av[alp] = 0
-            }
-        })
-        return av
-    }, {})
-
-    listOfCat.forEach((v, i) => {
-        listOfCat.splice(i, 1, '('+v+' : '+list[v]+')')
-    })
-
-    return listOfCat.join(' - ')
-}
-
-
-
-console.log(stockList(["ABART 20", "CDXEF 50", "BKWRK 25", "BTSQZ 89", "DRTYM 60"], ["A", "B", "C", "W"]));
+const L = ["ABART 20", "CDXEF 50", "BKWRK 25", "BTSQZ 89", "DRTYM 60"]
+const M = ["A", "B", "C", "W"] 
